@@ -17,5 +17,18 @@ def char_counter(book_string):
                  
     return char_count_dict
 
+def sort_on(items):
+    return items["num"]
+
+def list_dict(dict):
+    list_of_dict = list(dict.items())
+
+    for i in range(len(list_of_dict)):
+        list_of_dict[i] = {"char": list_of_dict[i][0], "num" : list_of_dict[i][1]}
+
+    list_of_dict.sort(reverse=True, key=sort_on)
+        
+    return list_of_dict
+
     
 
